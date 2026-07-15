@@ -3,7 +3,7 @@ name: Build Android APK
 on:
   push:
     branches: [ main, master ]
-  workflow_dispatch: # Allows you to also trigger the build manually
+  workflow_dispatch:
 
 jobs:
   build:
@@ -18,6 +18,10 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '17'
+
+      # This step generates the missing 'gradlew' file on the fly!
+      - name: Generate missing Gradle Wrapper
+        run: gradle wrapper
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
