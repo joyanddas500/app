@@ -1,0 +1,6 @@
+{
+  "name": "Screen Redraw Utility",
+  "description": "Forces redraws of display layers via an interactive floating overlay button to resolve graphical freezing issues on older devices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
