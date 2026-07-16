@@ -40,7 +40,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug -Pkotlin.compiler.execution.strategy=daemon -Dkotlin.compiler.execution.strategy=daemon
+        run: gradle assembleDebug -Pkotlin.compiler.execution.strategy=daemon -Dkotlin.compiler.execution.strategy=daemon
 
       - name: Upload Debug APK to Artifacts
         uses: actions/upload-artifact@v4
